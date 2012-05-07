@@ -4,7 +4,7 @@ Facilitates comparisons of Floats, primarily in mocking. Some mocking libraries 
 delta assertions within the expectations of your method calls. For example:
 
    some_animated_point = mock()
-   mock.should_receive(:move_to).with(0.01456, -234.786)
+   some_animated_point.should_receive(:move_to).with(0.01456, -234.786)
    
 Then you feed this mock from the outside, using some iterative algorithm with arbitrary precision, and your
 assertion fails.
