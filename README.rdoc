@@ -9,7 +9,7 @@ delta assertions within the expectations of your method calls. For example:
 Then you feed this mock from the outside, using some iterative algorithm with arbitrary precision, and your
 assertion fails.
 
-   Expectation not matched: called "move_to" with (0.01459999, -234.78576)
+   Expectation not matched: called "move_to" with (0.01455999, -234.78576)
 
 This comes because what you should have done is comparing within a delta/epsilon value instead of comparing verbatim.
 
