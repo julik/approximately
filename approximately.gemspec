@@ -5,12 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "approximately"
-  s.version = ""
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Julik"]
   s.date = "2012-05-07"
-  s.description = "TODO: longer description of your gem"
   s.email = "me@julik.nl"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -22,6 +21,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "approximately.gemspec",
     "lib/approximately.rb",
     "test/helper.rb",
     "test/test_approximately.rb"
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.15"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "Facilitates float comparisons in mocks"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
