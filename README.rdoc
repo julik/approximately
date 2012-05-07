@@ -23,7 +23,7 @@ of one another. So instead you would do this (in your unit/spec framework du jou
   include Approximately
   
   some_animated_point = mock()
-  mock.should_receive(:move_to).with(approx(0.01456, 0.001), approx(-234.786, 0.001))
+  some_animated_point.should_receive(:move_to).with(approx(0.01456, 0.001), approx(-234.786, 0.001))
 
 These objects will compare properly with your reference inputs.
 
