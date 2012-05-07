@@ -6,9 +6,9 @@ class TestApproximately < Test::Unit::TestCase
   should "return an approximate object" do
     obj = approx(10)
     assert_kind_of Approximately::DeltaFloat, obj
-    assert_kind_of Float, obj.float, "Should have stored a float in the attribute"
+    assert_kind_of Float, obj.to_f, "Should have stored a float in the attribute"
     assert_equal obj.float, obj.to_f
-    assert_in_delta 10.0, obj.float, 0.01
+    assert_in_delta 10.0, obj.to_f, 0.01
   end
   
   should "compare to another float within delta" do

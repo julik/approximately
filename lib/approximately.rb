@@ -6,22 +6,17 @@ module Approximately
   # compared to another Float (or an object that responds to to_f)
   # it will be equal to that object if the float value of the ApproximateFloat
   # and the value being compared to are within a passed delta
-  class DeltaFloat
+  class DeltaFloat < Struct.new(:float, :delta)
     include Comparable
-    attr_accessor :float, :delta
-    alias_method :to_f, :float
-    
-    def initialize(float_value, delta)
-      @float, @delta = float_value.to_f, delta
-    end
     
     def to_f
-      @float
+      float.to_f
     end
     
     def <=>(another)
-      d = (@float - another.to_f).abs
+      d = (to_f - another.to_f).abs
       return 0 if d < delta
+      
       float <=> another.to_f
     end
   end
