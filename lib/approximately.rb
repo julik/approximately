@@ -1,3 +1,4 @@
+# Include this module into your spec/test case/whatever
 module Approximately
   VERSION = "1.0.0"
   DEFAULT_DELTA = 0.01
@@ -20,6 +21,9 @@ module Approximately
     end
   end
   
+  # Returns the passed Float into a DeltaFloat object. The optional
+  # second argument is the delta that will be considered sufficient for
+  # the comparison to evaluate to true
   def approx(float, delta = DEFAULT_DELTA)
     DeltaFloat.new(float, delta)
   end
