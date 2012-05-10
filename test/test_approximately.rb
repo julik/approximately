@@ -15,7 +15,15 @@ class TestApproximately < Test::Unit::TestCase
     d = 0.1
     assert_equal approx(1, d), approx(1, d), "Should be equal within delta"
     assert_equal approx(1, d), approx(0.95, d), "Should be equal within delta"
-    assert_not_equal approx(1, d), approx(1.11, d), "Should not be equal outside delta"
+    assert_not_equal approx(1.0, d), approx(1.11, d), "Should not be equal outside delta"
+  end
+  
+  should "compare to another float as a left-hand expression" do
+    assert_equal approx(1.0, 0.1), 1.05, "Should be equal within delta"
+  end
+  
+  should "compare to another float as a right-hand expression" do
+    assert_equal 1.05, approx(1.0, 0.1), "Should be equal within delta"
   end
   
   should "create the object with default delta" do
