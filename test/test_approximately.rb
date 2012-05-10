@@ -31,6 +31,12 @@ class TestDeltaFloat < Test::Unit::TestCase
     assert_kind_of Approximately::DeltaFloat, a
     assert_equal a.delta, Approximately::DEFAULT_DELTA
   end
+
+  should "create the object with a module method" do
+    a = Approximately.approx(0.013)
+    assert_kind_of Approximately::DeltaFloat, a
+    assert_equal a.delta, Approximately::DEFAULT_DELTA
+  end
   
   should "create the object with custom delta" do
     d = 0.001

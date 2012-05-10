@@ -27,4 +27,6 @@ module Approximately
   def approx(float, delta = DEFAULT_DELTA)
     DeltaFloat.new(float, delta)
   end
+  
+  module_function :approx
 end
