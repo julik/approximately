@@ -27,6 +27,8 @@ of one another. So instead you would do this (in your unit/spec framework du jou
 
 These objects will compare properly with your reference inputs.
 
+This module is completely uninvasive and contains no hacks for minitest, RSpec or other testing/mocking frameworks.
+
 == Contributing to approximately
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
