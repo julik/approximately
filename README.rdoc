@@ -13,12 +13,16 @@ assertion fails.
 
 This comes because what you should have done is comparing within a delta/epsilon value instead of comparing verbatim.
 
-And this is what most mocking libraries will do.
+However, once the expected argument has been swallowed by the mocking library you don't really have any control
+on what is going to happen to it, and in most mocking libraries you cannot add detailed assertions on the 
+expectation arguments.
 
-Some mocking libraries allow you to stuff an "assert_in_delta" call into the block of the expectation setup, but not
-all of them - and the expectation block might not be called at all if the passed arguments do not match. So what
-we can do instead is create a special object that will be equal to another Float object when they both are in delta
-of one another. So instead you would do this (in your unit/spec framework du jour)
+So what we can do instead is create a special object that will be equal to another Float object when they both are in delta
+of one another. For example:
+
+  Approximately.aprox(23.4, 0.1) == 23.44 # true
+
+In your unit testing/spec framework du jour your test would look like this:
   
   include Approximately
   
