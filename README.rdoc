@@ -20,7 +20,7 @@ expectation arguments.
 So what we can do instead is create a special object that will be equal to another Float object when they both are in delta
 of one another. For example:
 
-  Approximately.aprox(23.4, 0.1) == 23.44 # true
+  Approximately.approx(23.4, 0.1) == 23.44 # true
 
 In your unit testing/spec framework du jour your test would look like this:
   
