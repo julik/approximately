@@ -1,6 +1,6 @@
 # Include this module into your spec/test case/whatever
 module Approximately
-  VERSION = "1.0.0"
+  VERSION = "1.1.0"
   DEFAULT_DELTA = 0.01
   
   # This object can be used for float comparisons. When it is instantiaded
@@ -19,6 +19,15 @@ module Approximately
       return 0 if d < delta
       float <=> another.to_f
     end
+    
+    def inspect
+      "~%0.8f" % to_f
+    end
+    
+    def to_s
+      inspect
+    end
+    
   end
   
   # Returns the passed Float into a DeltaFloat object. The optional

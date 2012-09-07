@@ -18,6 +18,11 @@ class TestDeltaFloat < Test::Unit::TestCase
     assert_not_equal DeltaFloat.new(1.0, d), DeltaFloat.new(1.11, d), "Should not be equal outside delta"
   end
   
+  should "print well" do
+    d = 0.1
+    assert_equal "~1.00000000", DeltaFloat.new(1, d).to_s
+  end
+  
   should "compare to another float as a left-hand expression" do
     assert_equal DeltaFloat.new(1.0, 0.1), 1.05, "Should be equal within delta"
   end
