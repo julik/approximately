@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "approximately"
-  s.version = "1.0.0"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Julik"]
-  s.date = "2012-05-07"
+  s.date = "2012-09-07"
   s.email = "me@julik.nl"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/julik/approximately"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.15"
+  s.rubygems_version = "1.8.24"
   s.summary = "Facilitates float comparisons in mocks"
 
   if s.respond_to? :specification_version then
