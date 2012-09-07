@@ -1,5 +1,12 @@
 require 'helper'
 
+class TestModule < Test::Unit::TestCase
+  should "provide a module method" do
+    obj = Approximately.approx(10)
+    assert_kind_of Approximately::DeltaFloat, obj
+  end
+end
+
 class TestDeltaFloat < Test::Unit::TestCase
   include Approximately
   
