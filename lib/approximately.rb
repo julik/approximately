@@ -30,7 +30,7 @@ module Approximately
     
   end
   
-  # Returns the passed Float into a DeltaFloat object. The optional
+  # Returns the passed Float wrapped in a DeltaFloat object. The optional
   # second argument is the delta that will be considered sufficient for
   # the comparison to evaluate to true
   def approx(float, delta = DEFAULT_DELTA)
